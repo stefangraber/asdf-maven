@@ -38,8 +38,8 @@ build_copy_cleanup() {
 		tar xzvf $version.tar.gz
 		rm $version.tar.gz
 
-		mv apache-maven-$version/* .
-		rmdir apache-maven-$version
+		cp -R apache-maven-$version/* .
+		rm -rf apache-maven-$version
 	}
 	cd $origin
 }
